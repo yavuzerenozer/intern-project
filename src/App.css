@@ -189,3 +189,7 @@
 .col-width {
   width: 33%;
 }
+
+.form-check-label.ml-3.text-muted.container.container-1 {
+  cursor: default;
+}
