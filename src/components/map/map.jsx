@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import Geocode from "react-geocode";
 import { geocode } from "../api/apiCall";
+import classic from './marker0.png';
+import human from './marker1.png';
+import green from './marker2.png';
+import blue from './marker3.png';
 
 class Map extends Component {
   componentDidMount() {
@@ -79,10 +83,10 @@ class Map extends Component {
 
   render() {
     const marker_styles = [
-      { select: "0", text: "Classic" },
-      { select: "1", text: "Human" },
-      { select: "2", text: "Green" },
-      { select: "3", text: "Blue" },
+      { select: "0", text: "Classic", img: classic },
+      { select: "1", text: "Human", img: human },
+      { select: "2", text: "Green", img: green },
+      { select: "3", text: "Blue", img: blue },
     ];
     const map_styles = [
       { select: "0", text: "White" },
@@ -99,18 +103,16 @@ class Map extends Component {
             <p className="useri col column-overflow">{window.jusername}</p>
           </div>
           <div className="row">
-            <p className="userp col-md-auto">API Key:</p>
-            <p className="useri col column-overflow">{window.japiKey}</p>
-          </div>
-          <div className="row">
             <p className="userp col-md-auto">Form ID:</p>
             <p className="useri col column-overflow">
-              {this.props.values.selectedForm}
+              <a href={`https://jotform.com/${this.props.values.selectedForm}`}>
+                {this.props.values.selectedForm}
+              </a>
             </p>
           </div>
 
           <hr />
-          <h3 className="userheading mt-4">Step 3</h3>
+          <h3 className="userheading mt-4">Step 5</h3>
           <p className="userp">
             <i className="fa fa-map-marker" aria-hidden="true"></i> Select a
             style for the marker
@@ -139,6 +141,10 @@ class Map extends Component {
                             onClick={this.props.handleChange("selectedMarker")}
                           />
                           <span className="checkmark"></span>
+                          <img alt="" src={element.img} style={{
+                            width: 24
+                          }}
+                          />
                         </label>
                       </td>
                     </tr>
@@ -151,6 +157,7 @@ class Map extends Component {
         </div>
 
         <div className="container ">
+          <h3 className="userheading mt-4">Step 6</h3>
           <p className="userp ">
             <i className="fa fa-tag" aria-hidden="true"></i> Select a map style.
           </p>

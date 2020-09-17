@@ -20,12 +20,12 @@ class Confirm extends Component {
     const questions = this.props.values.questions.filter(
       (question) => question.id === this.props.values.selectedForm
     );
-    const labels = questions[0].questions.filter(
+    const labels = questions.length > 0 ? questions[0].questions.filter(
       (question) => question.type !== "control_address"
-    );
-    const addresses = questions[0].questions.filter(
+    ) : [];
+    const addresses = questions.length > 0 ? questions[0].questions.filter(
       (question) => question.type === "control_address"
-    );
+    ) : [];
     return (
       <React.Fragment>
         <div className="usercontainer container">
@@ -35,18 +35,16 @@ class Confirm extends Component {
             <p className="useri col column-overflow">{window.jusername}</p>
           </div>
           <div className="row">
-            <p className="userp col-md-auto">API Key:</p>
-            <p className="useri col column-overflow">{window.japiKey}</p>
-          </div>
-          <div className="row">
             <p className="userp col-md-auto">Form ID:</p>
             <p className="useri col column-overflow">
-              {this.props.values.selectedForm}
+              <a href={`https://jotform.com/${this.props.values.selectedForm}`}>
+                {this.props.values.selectedForm}
+              </a>
             </p>
           </div>
 
           <hr />
-          <h3 className="userheading mt-4">Step 2</h3>
+          <h3 className="userheading mt-4">Step 3</h3>
           <p className="userp">
             <i className="fa fa-map-marker" aria-hidden="true"></i> Select an
             address field for the pin.
@@ -90,6 +88,7 @@ class Confirm extends Component {
         </div>
 
         <div className="container ">
+          <h3 className="userheading mt-4">Step 4</h3>
           <p className="userp ">
             <i className="fa fa-tag" aria-hidden="true"></i> Select a label for
             the pin.

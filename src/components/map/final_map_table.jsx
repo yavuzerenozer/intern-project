@@ -56,13 +56,11 @@ class FinalMapTable extends Component {
             <p className="useri col column-overflow">{window.jusername}</p>
           </div>
           <div className="row">
-            <p className="userp col-md-auto">API Key:</p>
-            <p className="useri col column-overflow">{window.japiKey}</p>
-          </div>
-          <div className="row">
             <p className="userp col-md-auto">Form ID:</p>
             <p className="useri col column-overflow">
-              {this.props.values.selectedForm}
+              <a href={`https://jotform.com/${this.props.values.selectedForm}`}>
+                {this.props.values.selectedForm}
+              </a>
             </p>
           </div>
 

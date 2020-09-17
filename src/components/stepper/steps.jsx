@@ -84,7 +84,7 @@ class Steps extends Component {
           isLoading: 0,
           questions: questions,
         });
-      }, 350);
+      }, 1000);
     });
   }
 
@@ -139,6 +139,7 @@ class Steps extends Component {
       form_list,
       japiKey,
     } = this.state;
+    console.log('questions: ', questions);
     const values = {
       step,
       selectedForm,
@@ -262,6 +263,8 @@ class Steps extends Component {
             </div>
           </React.Fragment>
         );
+        default:
+          break;
     }
   }
 }

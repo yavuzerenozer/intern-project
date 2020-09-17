@@ -27,10 +27,6 @@ class FormSelector extends Component {
               {window.jusername}
             </p>
           </div>
-          <div className="row">
-            <p className="userp col-md-auto">API Key:</p>
-            <p className="useri col-md-autocolumn-overflow">{window.japiKey}</p>
-          </div>
           <hr />
           <h3 className="userheading mt-3">Step 1</h3>
           <p className="userp">
@@ -54,6 +50,10 @@ class FormSelector extends Component {
             onChange={this.props.handleChange("googleAPI")}
           ></input>
           <hr />
+          <h3 className="userheading mt-3">Step 2</h3>
+          <p className="userp">
+            Select a form
+          </p>
           <div className="table-container">
             <table className="table table-borderless">
               <tbody>
