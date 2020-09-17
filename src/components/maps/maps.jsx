@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { getData } from "../api/apiCall";
 import Loader from "react-loader-spinner";
-import Navbar from "../home/navbar";
 import GoogleMapReact from "google-map-react";
 import Marker from "../map/marker";
 import styles from "../map/styles.json";
@@ -18,10 +17,12 @@ class Maps extends Component {
   componentDidMount() {
     getData(this.props.match.params.mapID).then((response) => {
       let result = response.data;
+	  let selectedMarker = parseInt(result.selectedMarker)-1;
+	  let selectedStyle = parseInt(result.selectedStyle)-1;
       this.setState({
         labels: result.pins,
-        selectedMarker: result.selectedMarker,
-        selectedStyle: result.selectedStyle,
+        selectedMarker,
+        selectedStyle,
         formID: result.formID,
         isLoading: 0,
         googleAPIKey: result.googleAPIKey,
@@ -38,7 +39,7 @@ class Maps extends Component {
             color="#18265b"
             height={100}
             width={100}
-            timeout={3000} //3 secs
+            timeout={10000} //3 secs
           />
         </div>
       );
@@ -53,9 +54,9 @@ class Maps extends Component {
       };
       return (
         <React.Fragment>
-          <div className="row container-fluid">
-            <div className="col-md-auto ml-5 ">
-              <div className="table-container-4 ">
+          <div className="row no-gutters">
+            <div className="col-4 padding-0">
+              <div className="table-container-4 tableFixHead ">
                 <table className="table">
                   <thead className="thead-dark align-items-center justify-content-center">
                     <tr>
@@ -93,10 +94,9 @@ class Maps extends Component {
                   </tbody>
                 </table>
               </div>
-              <hr />
             </div>
-            <div className="col-8">
-              <div style={{ height: "80vh", width: "100%" }}>
+            <div className="col-8 padding-0">
+              <div style={{ height: "100vh", width: "100%" }}>
                 <GoogleMapReact
                   bootstrapURLKeys={key}
                   defaultCenter={center}

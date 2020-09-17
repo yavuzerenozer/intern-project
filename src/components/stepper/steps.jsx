@@ -139,7 +139,6 @@ class Steps extends Component {
       form_list,
       japiKey,
     } = this.state;
-    console.log('questions: ', questions);
     const values = {
       step,
       selectedForm,

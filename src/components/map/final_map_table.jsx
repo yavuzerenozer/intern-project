@@ -9,15 +9,15 @@ class FinalMapTable extends Component {
   Call = () => {
     let data = {
       googleAPIKey: this.props.values.googleAPI,
-      selectedMarker: this.props.selectedMarker,
-      selectedStyle: this.props.selectedStyle,
+      selectedMarker: parseInt(this.props.selectedMarker)+1,
+      selectedStyle: parseInt(this.props.selectedStyle)+1,
       jotformAPIKey: this.props.values.japiKey,
       formID: this.props.values.selectedForm,
       labels: this.props.values.selectedLabel,
       addressQuestionID: this.props.values.selectedQuestion,
     };
+
     postData(data).then((response) => {
-      console.log(response);
       this.props.handleMapKey(response.data.data);
     });
   };
@@ -118,7 +118,7 @@ class FinalMapTable extends Component {
           className="btn btn-info m-3 float-right my-small-btn"
           onClick={this.Call}
         >
-          Get Your Map
+          Get Map
         </button>
       </React.Fragment>
     );

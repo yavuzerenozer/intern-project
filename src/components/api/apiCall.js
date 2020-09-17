@@ -57,6 +57,7 @@ export async function geocode(address, apikey) {
 
 export async function postData(data) {
   var formdata = new FormData();
+
   formdata.set("googleAPIKey", data.googleAPIKey);
   formdata.set("selectedMarker", data.selectedMarker);
   formdata.set("selectedStyle", data.selectedStyle);
