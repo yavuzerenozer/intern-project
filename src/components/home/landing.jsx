@@ -32,7 +32,6 @@ class Home extends Component {
     return (
       <React.Fragment>
         <div className="container">
-          <div className="container-fluid">
             <nav className="navbar navbar-expand-lg bg-none navbar-light ml-5 mr-5 mt-3 ">
               <a className="navbar-brand" href="http://localhost:3000">
                 <img src={logo} width="200" alt=""></img>
@@ -65,8 +64,8 @@ class Home extends Component {
             </nav>
             <br />
 
-            <div className="row ml-5">
-              <div className="col my-auto mx-auto ">
+            <div className="row hero">
+              <div className="col-md-7">
                 <h1 className="display-heading">
                   Create a map from your JotForm submissions.
                 </h1>
@@ -85,8 +84,8 @@ class Home extends Component {
                 <img
                   src={inst}
                   alt="Instructions"
-                  style={{ height: "266px" }}
-                ></img>
+                  style={{ height: "200px" }}
+                />
                 <hr />
                 <button
                   onClick={this.handleLogin}
@@ -95,11 +94,7 @@ class Home extends Component {
                   Authorize JotMap
                 </button>
               </div>
-              <div className="col-md-auto my-auto p-1">
-                <img src={bg} alt="Background"></img>
-              </div>
             </div>
-          </div>
         </div>
       </React.Fragment>
     );

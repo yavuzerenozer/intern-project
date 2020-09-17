@@ -50,6 +50,23 @@
   background: #555;
 }
 
+.hero {
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  background-image: url('./components/home/hero.png');
+  position: absolute;
+  display: block;
+  width: 700px;
+  height: 650px;
+  background-size: contain;
+  right: -200px;
+  top: 0px;
+  background-repeat: no-repeat;
+}
+
 /*HEADING*/
 .display-heading {
   color: #18265b;
