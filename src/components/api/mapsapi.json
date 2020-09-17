@@ -1,0 +1,246 @@
+{
+  "pins": [
+    {
+      "labels": [
+        {
+          "name": "email",
+          "order": "3",
+          "text": "Email",
+          "type": "control_email",
+          "answer": "test@gmail.com"
+        },
+        {
+          "name": "phoneNumber",
+          "order": "5",
+          "sublabels": "{\"country\":\"Country Code\",\"area\":\"Area Code\",\"phone\":\"Phone Number\",\"full\":\"Phone Number\",\"masked\":\"Please enter a valid phone number.\"}",
+          "text": "Phone Number",
+          "type": "control_phone",
+          "answer": { "full": "(222) 222-2222" },
+          "prettyFormat": "(222) 222-2222"
+        },
+        {
+          "name": "date",
+          "order": "6",
+          "sublabels": "{\"day\":\"Day\",\"month\":\"Month\",\"year\":\"Year\",\"last\":\"Last Name\",\"hour\":\"Hour\",\"minutes\":\"Minutes\",\"litemode\":\"Date\"}",
+          "text": "Date",
+          "type": "control_datetime",
+          "answer": { "month": "09", "day": "03", "year": "2020" },
+          "prettyFormat": "09-03-2020"
+        }
+      ],
+      "coordinates": {
+        "lat": "38.41419983",
+        "lng": "27.12338448",
+        "fullAddress": "Street Address: mithatpa\u015fa caddesi City: izmir Postal / Zip Code: 35270 Country: Turkey "
+      }
+    },
+    {
+      "labels": [
+        {
+          "name": "email",
+          "order": "3",
+          "text": "Email",
+          "type": "control_email"
+        },
+        {
+          "name": "phoneNumber",
+          "order": "5",
+          "sublabels": "{\"country\":\"Country Code\",\"area\":\"Area Code\",\"phone\":\"Phone Number\",\"full\":\"Phone Number\",\"masked\":\"Please enter a valid phone number.\"}",
+          "text": "Phone Number",
+          "type": "control_phone"
+        },
+        {
+          "name": "date",
+          "order": "6",
+          "sublabels": "{\"day\":\"Day\",\"month\":\"Month\",\"year\":\"Year\",\"last\":\"Last Name\",\"hour\":\"Hour\",\"minutes\":\"Minutes\",\"litemode\":\"Date\"}",
+          "text": "Date",
+          "type": "control_datetime"
+        }
+      ]
+    },
+    {
+      "labels": [
+        {
+          "name": "email",
+          "order": "3",
+          "text": "Email",
+          "type": "control_email",
+          "answer": "john@example.com"
+        },
+        {
+          "name": "phoneNumber",
+          "order": "5",
+          "sublabels": "{\"country\":\"Country Code\",\"area\":\"Area Code\",\"phone\":\"Phone Number\",\"full\":\"Phone Number\",\"masked\":\"Please enter a valid phone number.\"}",
+          "text": "Phone Number",
+          "type": "control_phone"
+        },
+        {
+          "name": "date",
+          "order": "6",
+          "sublabels": "{\"day\":\"Day\",\"month\":\"Month\",\"year\":\"Year\",\"last\":\"Last Name\",\"hour\":\"Hour\",\"minutes\":\"Minutes\",\"litemode\":\"Date\"}",
+          "text": "Date",
+          "type": "control_datetime"
+        }
+      ],
+      "coordinates": {
+        "lat": "38.33848190",
+        "lng": "26.63940430",
+        "fullAddress": "Street Address: 12064 sok Street Address Line 2: sayg\u0131n studyo pazar sitesi no: 10-1 City: G\u00dcLBAHCE State / Province: URLA Postal / Zip Code: 35433 "
+      }
+    },
+    {
+      "labels": [
+        {
+          "name": "email",
+          "order": "3",
+          "text": "Email",
+          "type": "control_email",
+          "answer": "john@example.com"
+        },
+        {
+          "name": "phoneNumber",
+          "order": "5",
+          "sublabels": "{\"country\":\"Country Code\",\"area\":\"Area Code\",\"phone\":\"Phone Number\",\"full\":\"Phone Number\",\"masked\":\"Please enter a valid phone number.\"}",
+          "text": "Phone Number",
+          "type": "control_phone"
+        },
+        {
+          "name": "date",
+          "order": "6",
+          "sublabels": "{\"day\":\"Day\",\"month\":\"Month\",\"year\":\"Year\",\"last\":\"Last Name\",\"hour\":\"Hour\",\"minutes\":\"Minutes\",\"litemode\":\"Date\"}",
+          "text": "Date",
+          "type": "control_datetime"
+        }
+      ]
+    },
+    {
+      "labels": [
+        {
+          "name": "email",
+          "order": "3",
+          "text": "Email",
+          "type": "control_email",
+          "answer": "john@example.com"
+        },
+        {
+          "name": "phoneNumber",
+          "order": "5",
+          "sublabels": "{\"country\":\"Country Code\",\"area\":\"Area Code\",\"phone\":\"Phone Number\",\"full\":\"Phone Number\",\"masked\":\"Please enter a valid phone number.\"}",
+          "text": "Phone Number",
+          "type": "control_phone",
+          "answer": { "full": "(111) 111-1111" },
+          "prettyFormat": "(111) 111-1111"
+        },
+        {
+          "name": "date",
+          "order": "6",
+          "sublabels": "{\"day\":\"Day\",\"month\":\"Month\",\"year\":\"Year\",\"last\":\"Last Name\",\"hour\":\"Hour\",\"minutes\":\"Minutes\",\"litemode\":\"Date\"}",
+          "text": "Date",
+          "type": "control_datetime"
+        }
+      ],
+      "coordinates": {
+        "lat": "38.42373276",
+        "lng": "27.14282608",
+        "fullAddress": "Street Address: toros cad Street Address Line 2: no 158 City: izmir State / Province: turkey Postal / Zip Code: 35130 "
+      }
+    },
+    {
+      "labels": [
+        {
+          "name": "email",
+          "order": "3",
+          "text": "Email",
+          "type": "control_email",
+          "answer": "john@example.com"
+        },
+        {
+          "name": "phoneNumber",
+          "order": "5",
+          "sublabels": "{\"country\":\"Country Code\",\"area\":\"Area Code\",\"phone\":\"Phone Number\",\"full\":\"Phone Number\",\"masked\":\"Please enter a valid phone number.\"}",
+          "text": "Phone Number",
+          "type": "control_phone",
+          "answer": { "full": "(111) 111-1111" },
+          "prettyFormat": "(111) 111-1111"
+        },
+        {
+          "name": "date",
+          "order": "6",
+          "sublabels": "{\"day\":\"Day\",\"month\":\"Month\",\"year\":\"Year\",\"last\":\"Last Name\",\"hour\":\"Hour\",\"minutes\":\"Minutes\",\"litemode\":\"Date\"}",
+          "text": "Date",
+          "type": "control_datetime"
+        }
+      ]
+    },
+    {
+      "labels": [
+        {
+          "name": "email",
+          "order": "3",
+          "text": "Email",
+          "type": "control_email",
+          "answer": "john@example.com"
+        },
+        {
+          "name": "phoneNumber",
+          "order": "5",
+          "sublabels": "{\"country\":\"Country Code\",\"area\":\"Area Code\",\"phone\":\"Phone Number\",\"full\":\"Phone Number\",\"masked\":\"Please enter a valid phone number.\"}",
+          "text": "Phone Number",
+          "type": "control_phone",
+          "answer": { "full": "(111) 111-1111" },
+          "prettyFormat": "(111) 111-1111"
+        },
+        {
+          "name": "date",
+          "order": "6",
+          "sublabels": "{\"day\":\"Day\",\"month\":\"Month\",\"year\":\"Year\",\"last\":\"Last Name\",\"hour\":\"Hour\",\"minutes\":\"Minutes\",\"litemode\":\"Date\"}",
+          "text": "Date",
+          "type": "control_datetime"
+        }
+      ],
+      "coordinates": {
+        "lat": "37.79214096",
+        "lng": "-122.39903259",
+        "fullAddress": "Street Address: 111 Pine Street Street Address Line 2: Suite 1815 City: San Francisco State / Province: CA Postal / Zip Code: 94111 "
+      }
+    },
+    {
+      "labels": [
+        {
+          "name": "email",
+          "order": "3",
+          "text": "Email",
+          "type": "control_email",
+          "answer": "john@example.com"
+        },
+        {
+          "name": "phoneNumber",
+          "order": "5",
+          "sublabels": "{\"country\":\"Country Code\",\"area\":\"Area Code\",\"phone\":\"Phone Number\",\"full\":\"Phone Number\",\"masked\":\"Please enter a valid phone number.\"}",
+          "text": "Phone Number",
+          "type": "control_phone",
+          "answer": { "full": "(111) 111-1111" },
+          "prettyFormat": "(111) 111-1111"
+        },
+        {
+          "name": "date",
+          "order": "6",
+          "sublabels": "{\"day\":\"Day\",\"month\":\"Month\",\"year\":\"Year\",\"last\":\"Last Name\",\"hour\":\"Hour\",\"minutes\":\"Minutes\",\"litemode\":\"Date\"}",
+          "text": "Date",
+          "type": "control_datetime",
+          "answer": { "month": "09", "day": "16", "year": "2020" },
+          "prettyFormat": "09-16-2020"
+        }
+      ],
+      "coordinates": {
+        "lat": "37.79214096",
+        "lng": "-122.39903259",
+        "fullAddress": "Street Address: 111 Pine Street Street Address Line 2: Suite 1815 City: San Francisco State / Province: CA Postal / Zip Code: 94111 "
+      }
+    }
+  ],
+  "selectedMarker": "3",
+  "selectedStyle": "1",
+  "formID": "202594875199068",
+  "googleAPIKey": "AIzaSyA-6rh4LErjM96t6CVB8YZHIIaGEvxk3BI"
+}
