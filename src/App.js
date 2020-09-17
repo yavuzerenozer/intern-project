@@ -5,6 +5,7 @@ import Home from "./components/home/landing";
 import Sample from "./components/home/sample";
 import Steps from "./components/stepper/steps";
 import Maps from "./components/maps/maps";
+import NotFound from "./components/home/notfound";
 
 class App extends Component {
   state = { isLoggedIn: 0 };
@@ -24,6 +25,7 @@ class App extends Component {
               <Steps isLoggedIn={this.state.isLoggedIn} {...props} />
             )}
           />
+          <Route path="/not-found" component={NotFound} />
           <Route
             path="/"
             exact

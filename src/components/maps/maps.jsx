@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { getData } from "../api/apiCall";
 import Loader from "react-loader-spinner";
 import GoogleMapReact from "google-map-react";
-import Marker from "../map/marker";
+import Marker from "./marker";
 import styles from "../map/styles.json";
 
 class Maps extends Component {
@@ -17,10 +17,21 @@ class Maps extends Component {
   componentDidMount() {
     getData(this.props.match.params.mapID).then((response) => {
       let result = response.data;
-	  let selectedMarker = parseInt(result.selectedMarker)-1;
-	  let selectedStyle = parseInt(result.selectedStyle)-1;
+      let labels = [];
+      console.log(result);
+      for (let i = 0; i < result.pins.length; i++) {
+        let label = {
+          coordinates: result.pins[i].coordinates,
+          labels: result.pins[i].labels,
+          show: false,
+        };
+        labels.push(label);
+      }
+      console.log(labels);
+      let selectedMarker = parseInt(result.selectedMarker) - 1;
+      let selectedStyle = parseInt(result.selectedStyle) - 1;
       this.setState({
-        labels: result.pins,
+        labels,
         selectedMarker,
         selectedStyle,
         formID: result.formID,
@@ -29,6 +40,21 @@ class Maps extends Component {
       });
     });
   }
+
+  onChildClickCallback = (key) => {
+    this.setState((state) => {
+      const index = state.labels.findIndex((e) => e.coordinates.lat === key);
+      state.labels[index].show = !state.labels[index].show; // eslint-disable-line no-param-reassign
+      return { labels: state.labels };
+    });
+  };
+  handleRowClick = (key) => {
+    this.setState((state) => {
+      const index = state.labels.findIndex((e) => e.coordinates.lat === key);
+      state.labels[index].show = !state.labels[index].show; // eslint-disable-line no-param-reassign
+      return { labels: state.labels };
+    });
+  };
 
   render() {
     if (this.state.isLoading)
@@ -76,7 +102,10 @@ class Maps extends Component {
                       return (
                         <tr
                           key={element.coordinates.lat}
-                          className="align-items-center"
+                          className="clickable-row"
+                          onClick={(key) => {
+                            this.handleRowClick(element.coordinates.lat);
+                          }}
                         >
                           <td className="align-items-center justify-content-center col-width">
                             {element.labels[0].answer}
@@ -102,6 +131,7 @@ class Maps extends Component {
                   defaultCenter={center}
                   defaultZoom={6}
                   options={mapOptions}
+                  onChildClick={this.onChildClickCallback}
                 >
                   {this.state.labels.map((coords) => (
                     <Marker
@@ -109,6 +139,9 @@ class Maps extends Component {
                       lat={parseFloat(coords.coordinates.lat)}
                       lng={parseFloat(coords.coordinates.lng)}
                       selectedMarker={this.state.selectedMarker}
+                      show={coords.show}
+                      data={coords.labels[0]}
+                      fullAddress={coords.coordinates.fullAddress}
                     />
                   ))}
                 </GoogleMapReact>
