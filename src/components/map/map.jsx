@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import Geocode from "react-geocode";
 import { geocode } from "../api/apiCall";
-import classic from './marker0.png';
-import human from './marker1.png';
-import green from './marker2.png';
-import blue from './marker3.png';
+import classic from "./marker0.png";
+import human from "./marker1.png";
+import green from "./marker2.png";
+import blue from "./marker3.png";
 
 class Map extends Component {
   componentDidMount() {
@@ -141,9 +141,12 @@ class Map extends Component {
                             onClick={this.props.handleChange("selectedMarker")}
                           />
                           <span className="checkmark"></span>
-                          <img alt="" src={element.img} style={{
-                            width: 24
-                          }}
+                          <img
+                            alt=""
+                            src={element.img}
+                            style={{
+                              width: 24,
+                            }}
                           />
                         </label>
                       </td>
@@ -159,7 +162,7 @@ class Map extends Component {
         <div className="container ">
           <h3 className="userheading mt-4">Step 6</h3>
           <p className="userp ">
-            <i className="fa fa-tag" aria-hidden="true"></i> Select a map style.
+            <i className="fa fa-map" aria-hidden="true"></i> Select a map style.
           </p>
 
           <hr />

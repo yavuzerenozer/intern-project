@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import { Route, Switch, Redirect } from "react-router-dom";
 import Home from "./components/home/landing";
+import Sample from "./components/home/sample";
 import Steps from "./components/stepper/steps";
 import Maps from "./components/maps/maps";
 
@@ -15,6 +16,7 @@ class App extends Component {
     return (
       <div>
         <Switch>
+          <Route path="/sample" component={Sample} />
           <Route path="/maps/:mapID?" component={Maps} />
           <Route
             path="/select-confirm"

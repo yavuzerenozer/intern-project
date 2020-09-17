@@ -138,6 +138,7 @@ class Steps extends Component {
       isLoading,
       form_list,
       japiKey,
+      generatedMapKey,
     } = this.state;
     const values = {
       step,
@@ -152,6 +153,7 @@ class Steps extends Component {
       isLoading,
       form_list,
       japiKey,
+      generatedMapKey,
     };
     switch (step) {
       case 1:
@@ -262,8 +264,8 @@ class Steps extends Component {
             </div>
           </React.Fragment>
         );
-        default:
-          break;
+      default:
+        break;
     }
   }
 }

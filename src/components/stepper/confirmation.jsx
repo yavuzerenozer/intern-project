@@ -2,7 +2,10 @@ import React, { Component } from "react";
 
 class Confirm extends Component {
   handleDisable = () => {
-    if (this.props.values.selectedQuestion !== "")
+    if (
+      this.props.values.selectedQuestion !== "" &&
+      this.props.values.selectedLabel !== ""
+    )
       this.props.values.required = true;
   };
 
@@ -20,12 +23,18 @@ class Confirm extends Component {
     const questions = this.props.values.questions.filter(
       (question) => question.id === this.props.values.selectedForm
     );
-    const labels = questions.length > 0 ? questions[0].questions.filter(
-      (question) => question.type !== "control_address"
-    ) : [];
-    const addresses = questions.length > 0 ? questions[0].questions.filter(
-      (question) => question.type === "control_address"
-    ) : [];
+    const labels =
+      questions.length > 0
+        ? questions[0].questions.filter(
+            (question) => question.type !== "control_address"
+          )
+        : [];
+    const addresses =
+      questions.length > 0
+        ? questions[0].questions.filter(
+            (question) => question.type === "control_address"
+          )
+        : [];
     return (
       <React.Fragment>
         <div className="usercontainer container">
