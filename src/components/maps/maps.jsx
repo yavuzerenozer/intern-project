@@ -83,7 +83,7 @@ class Maps extends Component {
           <div className="row no-gutters">
             <div className="col-4 padding-0">
               <div className="table-container-4 tableFixHead ">
-                <table className="table">
+                <table className="table table-hover">
                   <thead className="thead-dark align-items-center justify-content-center">
                     <tr>
                       <th scope="col col-width align-items-center justify-content-center">
@@ -102,8 +102,9 @@ class Maps extends Component {
                       return (
                         <tr
                           key={element.coordinates.lat}
+                          style={{ cursor: "pointer" }}
                           className="clickable-row"
-                          onClick={(key) => {
+                          onClick={() => {
                             this.handleRowClick(element.coordinates.lat);
                           }}
                         >
