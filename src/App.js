@@ -18,7 +18,7 @@ class App extends Component {
       <div>
         <Switch>
           <Route path="/sample" component={Sample} />
-          <Route path="/maps/:mapID?" component={Maps} />
+          <Route path="/maps/:mapID?/:mapType?" component={Maps} />
           <Route
             path="/select-confirm"
             component={(props) => (
